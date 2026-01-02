@@ -2,7 +2,7 @@
   --primary-color: #0b78d1; /* bluer teal-blue */
   --primary-dark: #095fae;
   --primary-light: rgba(11,120,209,0.08);
-  --secondary-color: #f1f5f9;
+  --secondary-color: #e2e8f0;
   --accent-color: #10b981;
   --danger-color: #ef4444;
   --warning-color: #f59e0b;
@@ -98,7 +98,7 @@ body {
 }
 
 .btn-secondary:hover:not(:disabled) {
-  background: #e2e8f0;
+  background: #b6c2ee;
 }
 
 .btn-success {

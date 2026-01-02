@@ -21,12 +21,12 @@ const Navbar = () => {
       <div className="container">
         <div className="navbar-content">
           <Link to="/dashboard" className="navbar-brand">
-            <BookOpen size={24} />
+            <BookOpen size={32} color="var(--accent-color)" />
             QuizMaster
           </Link>
           
           <div className="navbar-nav">
-            <div className="navbar-user">
+            <div className="navbar-user" style={{ gap: '25px',}}>
               <User size={20} />
               <span>{user.name}</span>
               <span className="badge">
