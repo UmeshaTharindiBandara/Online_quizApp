@@ -1,19 +1,19 @@
-import React from 'react'
-import { Link, useNavigate } from 'react-router-dom'
-import { useAuth } from '../context/AuthContext'
-import { LogOut, User, BookOpen } from 'lucide-react'
+import React from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { useAuth } from "../context/AuthContext";
+import { LogOut, User, BookOpen } from "lucide-react";
 
 const Navbar = () => {
-  const { user, logout } = useAuth()
-  const navigate = useNavigate()
+  const { user, logout } = useAuth();
+  const navigate = useNavigate();
 
   const handleLogout = () => {
-    logout()
-    navigate('/login')
-  }
+    logout();
+    navigate("/login");
+  };
 
   if (!user) {
-    return null
+    return null;
   }
 
   return (
@@ -24,13 +24,19 @@ const Navbar = () => {
             <BookOpen size={32} color="var(--accent-color)" />
             QuizMaster
           </Link>
-          
+
           <div className="navbar-nav">
-            <div className="navbar-user" style={{ gap: '25px',}}>
-              <User size={20} />
-              <span>{user.name}</span>
+            <div className="navbar-user" style={{ gap: "25px" }}>
+              <Link to="/dashboard" className="navbar-text">
+                Dashboard
+              </Link>
+              <Link to="/quizzes" className="navbar-text">
+                Quizzes
+              </Link>
+              
+              <span><User size={20} /> Hi {user.name}</span>
               <span className="badge">
-                {user.role === 'admin' ? 'Admin' : 'Student'}
+                {user.role === "admin" ? "Admin" : "Student"}
               </span>
             </div>
             <button onClick={handleLogout} className="btn btn-secondary">
@@ -41,7 +47,7 @@ const Navbar = () => {
         </div>
       </div>
     </nav>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

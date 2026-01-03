@@ -411,6 +411,16 @@ body {
   text-decoration: none;
 }
 
+.navbar-text {
+  font-size: 18px;
+  font-weight: 700;
+  background: var(--accent-color);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-decoration: none;
+}
+
 .navbar-nav {
   display: flex;
   align-items: center;
@@ -421,7 +431,7 @@ body {
   display: flex;
   align-items: center;
   gap: 12px;
-  color: var(--text-secondary);
+  color: var(--primary-color);
 }
 
 .alert {
